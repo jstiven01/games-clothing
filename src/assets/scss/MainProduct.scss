@@ -14,6 +14,28 @@
         height: 421px;
         background-position: center;
     }
+    .reference {
+        
+        color: #565656;
+        font-size: 15px;
+    }
+    .prices {
+        display: flex;
+        flex-direction: row;
+        font-size: 38px;
+        color: #2c303d;
+        font-weight: 1000;
+        .real-price{
+            margin-right: 16px;
+            .price-digit {
+                text-decoration: line-through;
+            }
+        }
+        .discount-price{
+            color: #ce2c52;
+            text-decoration: none;
+        }
+    }
 }
 
 

@@ -11,10 +11,18 @@ const MainProduct = () => (
     </div>
     <div className="main-img" />
     <div className="product-details">
-      <span>Item #: 701642853695</span>
+      <span className="reference">Item #: 701642853695</span>
       <div className="prices">
-        <span>29.50</span>
-        <span>19.99</span>
+      <div className="real-price">
+      <span>$</span>
+        <span className="price-digit">29.50</span>
+      </div>
+      <div className="discount-price">
+      <span>$</span>
+        <span className="price-digit">19.99</span>
+      </div>
+
+
       </div>
       <div className="rating-stars">
         <FontAwesomeIcon icon={faStar} />
