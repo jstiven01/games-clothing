@@ -1,0 +1,19 @@
+.main{
+    .main-title-section{
+        margin: 38px;
+        .main-title{
+            font-size: 23px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: left;
+        }
+    }
+    .main-img{
+        background-image: url('../img/mainPhoto.png');
+        height: 421px;
+        background-position: center;
+    }
+}
+
+
