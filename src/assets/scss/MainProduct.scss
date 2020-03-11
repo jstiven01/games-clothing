@@ -64,6 +64,23 @@
             background-color: #d72424;
         }
     }
+    .size-section{
+        display: flex;
+        flex-direction: column;
+        .name-sizes span{
+            margin-right: 40px;
+        }
+    }
+    .color-section{
+        .buttons-colors{
+            display:inline-block;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: none;
+            margin-right: 12px;
+        }
+    }
 
 
 }

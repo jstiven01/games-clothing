@@ -10,6 +10,8 @@ const MainProduct = () => {
   const [data] = useState({
     rating: 4,
     socialMedia: [faFacebook, faTwitter, faTumblr, faYoutube],
+    sizes: ['XS', 'S', 'M'],
+    colors: ['#77d8e7', '#96c795', '#ce92a1', '#aa93cf'],
   });
 
   const ratingStars = (rating = data.rating) => {
@@ -26,6 +28,14 @@ const MainProduct = () => {
 
   const jsxSocialMedia = data.socialMedia.map(brand => (
     <button key={brand.iconName} type="button" className={`buttons-social-media background-color-${brand.iconName}`} aria-label={brand.iconName}><FontAwesomeIcon icon={brand} /></button>
+  ));
+
+  const jsxSizes = data.sizes.map(size => (
+    <span key={size}>{size}</span>
+  ));
+
+  const jstColors = data.colors.map(color => (
+    <button key={color} type="button" className="buttons-colors" aria-label={color} style={{ backgroundColor: `${color}` }} />
   ));
 
   return (
@@ -45,8 +55,6 @@ const MainProduct = () => {
             <span>$</span>
             <span className="price-digit">19.99</span>
           </div>
-
-
         </div>
         <div className="rating-stars">
           {ratingStars()}
@@ -60,23 +68,18 @@ const MainProduct = () => {
           eveniet, quibusdam explicabo est voluptate quaerat maxime asperiores!
           Voluptatibus non facilis autem aperiam distinctio hic!Magnam, veniam?
           Iure molestias, voluptatem quia tempore distinctio commodi asperiores
-          sint doloribus nostrum vel alias. Et at numquam hic eum. Dolores dignissimos
-          eius voluptatibus? Ex id rerum at dolores provident!
         </div>
         <div className="size-section">
-          <span>SELECT A SIZE</span>
-          <ul>
-            <li>XS</li>
-            <li>S</li>
-            <li>M</li>
-          </ul>
+          <span>SELECT A SIZE: </span>
+          <div className="name-sizes">
+            {jsxSizes}
+          </div>
         </div>
         <div className="color-section">
-          <ul>
-            <li>green</li>
-            <li>red</li>
-            <li>blue</li>
-          </ul>
+          <span>SELECT A COLOR: </span>
+          <div className="colors">
+            {jstColors}
+          </div>
         </div>
         <div className="button-cart">
           <button type="button">ADD TO CART</button>
