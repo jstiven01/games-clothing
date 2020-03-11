@@ -36,10 +36,36 @@
             text-decoration: none;
         }
     }
-    .background-star{
-        background-color: #ce2c52;;
-
+    .social-media-section{
+        display: flex;
+        .buttons-social-media{
+            display:inline-block;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            border: none;
+            text-align: center;
+            margin-right: 12px;
+            color: white;
+            padding-top: 4px;
+    
+        }
+        .background-color-facebook{
+            background-color: #5365d2;
+        }
+        .background-color-twitter{
+            background-color: #57bbd4;
+        }
+        .background-color-tumblr{
+            background-color: #2c87ce;
+        }
+        .background-color-youtube{
+            background-color: #d72424;
+        }
     }
+
+
 }
 
 

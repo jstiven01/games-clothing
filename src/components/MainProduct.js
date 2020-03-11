@@ -2,24 +2,31 @@ import React, { useState } from 'react';
 import '../assets/scss/MainProduct.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import {
+  faFacebook, faTwitter, faYoutube, faTumblr,
+} from '@fortawesome/free-brands-svg-icons';
 
 const MainProduct = () => {
   const [data] = useState({
     rating: 4,
+    socialMedia: [faFacebook, faTwitter, faTumblr, faYoutube],
   });
 
   const ratingStars = (rating = data.rating) => {
     const jsxStars = [];
     for (let index = 0; index < 5; index += 1) {
       if (index <= rating - 1) {
-        jsxStars.push(<FontAwesomeIcon icon={faStar} style={{ color: '#ce2c52' }} />);
+        jsxStars.push(<FontAwesomeIcon key={index} icon={faStar} style={{ color: '#ce2c52' }} />);
       } else {
-        jsxStars.push(<FontAwesomeIcon icon={faStar} style={{ color: '#ababab' }} />);
+        jsxStars.push(<FontAwesomeIcon key={index} icon={faStar} style={{ color: '#ababab' }} />);
       }
     }
     return <div>{jsxStars}</div>;
   };
+
+  const jsxSocialMedia = data.socialMedia.map(brand => (
+    <button key={brand.iconName} type="button" className={`buttons-social-media background-color-${brand.iconName}`} aria-label={brand.iconName}><FontAwesomeIcon icon={brand} /></button>
+  ));
 
   return (
     <div className="main">
@@ -44,10 +51,8 @@ const MainProduct = () => {
         <div className="rating-stars">
           {ratingStars()}
         </div>
-        <div className="social-media-section background-star">
-          <FontAwesomeIcon icon={faFacebook} />
-          <FontAwesomeIcon icon={faFacebook} />
-          <FontAwesomeIcon icon={faFacebook} />
+        <div className="social-media-section">
+          {jsxSocialMedia}
         </div>
         <div className="description-product">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit.
