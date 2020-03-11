@@ -81,8 +81,8 @@ const MainProduct = () => {
             {jstColors}
           </div>
         </div>
-        <div className="button-cart">
-          <button type="button">ADD TO CART</button>
+        <div className="section-button-cart">
+          <button type="button" className="button-cart">ADD TO CART</button>
         </div>
       </div>
     </div>
