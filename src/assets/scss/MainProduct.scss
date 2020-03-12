@@ -107,18 +107,38 @@ $break-tablet: 768px;
                 flex-direction: column;
                 font-weight: 900;
                 margin-bottom: 40px;
+                span {
+                    @media screen and (min-width: $break-tablet) {
+                        font-size: 14px;
+                    }
+                }
                 .name-sizes{
                     margin: 18px 0 0 14px;
+                    @media screen and (min-width: $break-tablet) {
+                        margin: 0 48px;
+                        display: flex;
+                    }
     
                 }
                 .name-sizes span{
                     margin-right: 40px;
                     font-size: 10px;
                     font-weight: 900;
+
+                }
+                @media screen and (min-width: $break-tablet) {
+                    flex-direction: row;
+                    margin-bottom: 30px;
                 }
             }
             .color-section{
                 font-weight: 900;
+                span {
+                    @media screen and (min-width: $break-tablet) {
+                        font-size: 14px;
+                        align-self: center;
+                    }
+                }
                 .colors{
                     margin-top: 18px;
                     .buttons-colors{
@@ -129,6 +149,14 @@ $break-tablet: 768px;
                         border: none;
                         margin-right: 12px;
                     }
+                    @media screen and (min-width: $break-tablet) {
+
+                        margin: 0 0 0 14px;
+                    }
+                }
+                @media screen and (min-width: $break-tablet) {
+                    display: flex;
+                    margin-top: 0;
                 }
     
             }
@@ -143,6 +171,9 @@ $break-tablet: 768px;
                     margin: 44px 0;
                     font-weight: 900;
                     font-size: 18px;
+                    @media screen and (min-width: $break-tablet) {
+                        margin: 20px 0;
+                    }
                 }
             }
             @media screen and (min-width: $break-tablet) {

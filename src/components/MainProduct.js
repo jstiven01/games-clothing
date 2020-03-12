@@ -84,13 +84,23 @@ const MainProduct = () => {
             Iure molestias, voluptatem quia tempore distinctio commodi asperiores
           </div>
           <div className="size-section">
-            <span>SELECT A SIZE: </span>
+            <Media query="(max-width: 767px)">
+              {matches => {
+                const titleSize = matches ? 'SELECT A SIZE: ' : 'SIZE: ';
+                return (<span>{titleSize}</span>);
+              }}
+            </Media>
             <div className="name-sizes">
               {jsxSizes}
             </div>
           </div>
           <div className="color-section">
-            <span>SELECT A COLOR: </span>
+            <Media query="(max-width: 767px)">
+              {matches => {
+                const titleColor = matches ? 'SELECT A COLOR: ' : 'COLOR: ';
+                return (<span>{titleColor}</span>);
+              }}
+            </Media>
             <div className="colors">
               {jstColors}
             </div>
