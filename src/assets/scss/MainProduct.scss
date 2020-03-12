@@ -1,3 +1,5 @@
+$break-tablet: 768px;
+
 .main{
     
     .main-title-section{
@@ -10,38 +12,22 @@
             text-align: left;
         }
     }
-    .main-img{
-        background-image: url('../img/mainPhoto.png');
-        height: 421px;
-        background-position: center;
-    }
-    .product-details{
-        margin: 18px 40px 0 40px;
-        .reference {
-            color: #565656;
-            font-size: 12px;
-        }
-        .prices {
-            margin: 8px 0 8px 0;
-            display: flex;
-            flex-direction: row;
-            font-size: 38px;
-            color: #2c303d;
-            font-weight: 1000;
-            .real-price{
-                margin-right: 16px;
-                .price-digit {
-                    text-decoration: line-through;
-                }
-            }
-            .discount-price{
-                color: #ce2c52;
-                text-decoration: none;
-            }
+    .main-product-info{
+
+        .main-img{
+            background-image: url('../img/mainPhoto2.png');
+            height: 421px;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
         }
         .social-media-section{
             margin: 30px 0;
             display: flex;
+            @media screen and (min-width: $break-tablet) {
+                flex-direction: column;
+                margin-left: 16px;
+            }
             .buttons-social-media{
                 display:inline-block;
                 height: 40px;
@@ -53,6 +39,9 @@
                 margin-right: 12px;
                 color: white;
                 padding-top: 4px;
+                @media screen and (min-width: $break-tablet) {
+                    margin-bottom: 10px;
+                }
         
             }
             .background-color-facebook{
@@ -68,54 +57,108 @@
                 background-color: #d72424;
             }
         }
-        .description-product{
-            font-size: 15px;
-            margin-bottom: 30px;
-        }
-        .size-section{
-            display: flex;
-            flex-direction: column;
-            font-weight: 900;
-            margin-bottom: 40px;
-            .name-sizes{
-                margin: 18px 0 0 14px;
-
+        .product-details{
+            margin: 18px 40px 0 40px;
+            .reference {
+                color: #565656;
+                font-size: 12px;
             }
-            .name-sizes span{
-                margin-right: 40px;
-                font-size: 10px;
-                font-weight: 900;
-            }
-        }
-        .color-section{
-            font-weight: 900;
-            .colors{
-                margin-top: 18px;
-                .buttons-colors{
-                    display:inline-block;
-                    height: 40px;
-                    width: 40px;
-                    border-radius: 50%;
-                    border: none;
-                    margin-right: 12px;
+            .prices {
+                margin: 8px 0;
+                display: flex;
+                flex-direction: row;
+                font-size: 38px;
+                color: #2c303d;
+                font-weight: 1000;
+                .real-price{
+                    margin-right: 16px;
+                    .price-digit {
+                        text-decoration: line-through;
+                    }
+                }
+                .discount-price{
+                    color: #ce2c52;
+                    text-decoration: none;
+                }
+                @media screen and (min-width: $break-tablet) {
+                    margin: 4px 0;
                 }
             }
-
-        }
-        .section-button-cart{
-            text-align: center;
-            .button-cart{
-                height: 56px;
-                width: 280px;
-                border-radius: 100px;
-                border: none;
-                background-color: #8ae6cf;
-                margin: 44px 0;
+            .rating-stars{
+                @media screen and (min-width: $break-tablet) {
+                    margin-bottom: 22px;
+                }
+            }
+            .details{
                 font-weight: 900;
-                font-size: 18px;
+                font-size: 14px;
+            }
+
+            .description-product{
+                font-size: 15px;
+                margin-bottom: 30px;
+                @media screen and (min-width: $break-tablet) {
+                    font-size: 13px;
+                    margin-top: 2px;
+                }
+            }
+            .size-section{
+                display: flex;
+                flex-direction: column;
+                font-weight: 900;
+                margin-bottom: 40px;
+                .name-sizes{
+                    margin: 18px 0 0 14px;
+    
+                }
+                .name-sizes span{
+                    margin-right: 40px;
+                    font-size: 10px;
+                    font-weight: 900;
+                }
+            }
+            .color-section{
+                font-weight: 900;
+                .colors{
+                    margin-top: 18px;
+                    .buttons-colors{
+                        display:inline-block;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        border: none;
+                        margin-right: 12px;
+                    }
+                }
+    
+            }
+            .section-button-cart{
+                text-align: center;
+                .button-cart{
+                    height: 56px;
+                    width: 280px;
+                    border-radius: 100px;
+                    border: none;
+                    background-color: #8ae6cf;
+                    margin: 44px 0;
+                    font-weight: 900;
+                    font-size: 18px;
+                }
+            }
+            @media screen and (min-width: $break-tablet) {
+                width: 50%;
+                margin: 0 20px;
             }
         }
+
+        @media screen and (min-width: $break-tablet) {
+            display: flex;
+            flex-direction: row;
+            margin: 0 36px;
+          }
+
     }
+
     
 
 

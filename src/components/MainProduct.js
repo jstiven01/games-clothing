@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Media from 'react-media';
 import '../assets/scss/MainProduct.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -43,46 +44,60 @@ const MainProduct = () => {
       <div className="main-title-section">
         <span className="main-title">For Gamers by Gamers Tee</span>
       </div>
-      <div className="main-img" />
-      <div className="product-details">
-        <span className="reference">Item #: 701642853695</span>
-        <div className="prices">
-          <div className="real-price">
-            <span>$</span>
-            <span className="price-digit">29.50</span>
+      <div className="main-product-info">
+        <div className="main-img">
+          <Media query="(min-width: 768px)">
+            <div className="social-media-section">
+              {jsxSocialMedia}
+            </div>
+          </Media>
+        </div>
+        <div className="product-details">
+          <span className="reference">Item #: 701642853695</span>
+          <div className="prices">
+            <div className="real-price">
+              <span>$</span>
+              <span className="price-digit">29.50</span>
+            </div>
+            <div className="discount-price">
+              <span>$</span>
+              <span className="price-digit">19.99</span>
+            </div>
           </div>
-          <div className="discount-price">
-            <span>$</span>
-            <span className="price-digit">19.99</span>
+          <div className="rating-stars">
+            {ratingStars()}
           </div>
-        </div>
-        <div className="rating-stars">
-          {ratingStars()}
-        </div>
-        <div className="social-media-section">
-          {jsxSocialMedia}
-        </div>
-        <div className="description-product">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Doloribus, quibusdam? Ducimus totam necessitatibus ipsa molestiae,
-          eveniet, quibusdam explicabo est voluptate quaerat maxime asperiores!
-          Voluptatibus non facilis autem aperiam distinctio hic!Magnam, veniam?
-          Iure molestias, voluptatem quia tempore distinctio commodi asperiores
-        </div>
-        <div className="size-section">
-          <span>SELECT A SIZE: </span>
-          <div className="name-sizes">
-            {jsxSizes}
+          <Media query="(max-width: 767px)">
+            <div className="social-media-section">
+              {jsxSocialMedia}
+            </div>
+          </Media>
+          <Media query="(min-width: 768px) and (max-width:1023px)">
+            <span className="details">DETAILS: </span>
+
+          </Media>
+          <div className="description-product">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Doloribus, quibusdam? Ducimus totam necessitatibus ipsa molestiae,
+            eveniet, quibusdam explicabo est voluptate quaerat maxime asperiores!
+            Voluptatibus non facilis autem aperiam distinctio hic!Magnam, veniam?
+            Iure molestias, voluptatem quia tempore distinctio commodi asperiores
           </div>
-        </div>
-        <div className="color-section">
-          <span>SELECT A COLOR: </span>
-          <div className="colors">
-            {jstColors}
+          <div className="size-section">
+            <span>SELECT A SIZE: </span>
+            <div className="name-sizes">
+              {jsxSizes}
+            </div>
           </div>
-        </div>
-        <div className="section-button-cart">
-          <button type="button" className="button-cart">ADD TO CART</button>
+          <div className="color-section">
+            <span>SELECT A COLOR: </span>
+            <div className="colors">
+              {jstColors}
+            </div>
+          </div>
+          <div className="section-button-cart">
+            <button type="button" className="button-cart">ADD TO CART</button>
+          </div>
         </div>
       </div>
     </div>
