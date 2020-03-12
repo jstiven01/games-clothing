@@ -41,18 +41,26 @@ const MainProduct = () => {
 
   return (
     <div className="main">
-      <div className="main-title-section">
-        <span className="main-title">For Gamers by Gamers Tee</span>
-      </div>
+      <Media query="(max-width: 1023px) ">
+        <div className="main-title-section">
+          <span className="main-title">For Gamers by Gamers Tee</span>
+        </div>
+      </Media>
+
       <div className="main-product-info">
         <div className="main-img">
-          <Media query="(min-width: 768px)">
+          <Media query="(min-width: 768px) and (max-width:1023px)">
             <div className="social-media-section">
               {jsxSocialMedia}
             </div>
           </Media>
         </div>
         <div className="product-details">
+          <Media query="(min-width: 1024px) ">
+            <div className="main-title-section">
+              <span className="main-title">For Gamers by Gamers Tee</span>
+            </div>
+          </Media>
           <span className="reference">Item #: 701642853695</span>
           <div className="prices">
             <div className="real-price">

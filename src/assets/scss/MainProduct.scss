@@ -1,6 +1,11 @@
 $break-tablet: 768px;
+$break-desktop: 1024px;
 
 .main{
+    @media screen and (min-width: $break-desktop) {
+        margin: 30px auto;
+        max-width: 1024px;
+    }
     
     .main-title-section{
         margin: 38px;
@@ -20,6 +25,9 @@ $break-tablet: 768px;
             background-position: center;
             background-repeat: no-repeat;
             width: 100%;
+            @media screen and (min-width: $break-tablet) {
+                width: 400px;
+            }
         }
         .social-media-section{
             margin: 30px 0;
@@ -187,6 +195,9 @@ $break-tablet: 768px;
             flex-direction: row;
             margin: 0 36px;
           }
+        @media screen and (min-width: $break-desktop) {
+        justify-content: space-between;
+        }
 
     }
 
