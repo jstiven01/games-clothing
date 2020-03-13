@@ -8,11 +8,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const MainProduct = () => {
-  const [data] = useState({
+  const [data, setState] = useState({
     rating: 4,
     socialMedia: [faFacebook, faTwitter, faTumblr, faYoutube],
     sizes: ['XS', 'S', 'M'],
     colors: ['#77d8e7', '#96c795', '#ce92a1', '#aa93cf'],
+    visibleSocial: false,
   });
 
   const ratingStars = (rating = data.rating) => {
@@ -38,6 +39,14 @@ const MainProduct = () => {
   const jstColors = data.colors.map(color => (
     <button key={color} type="button" className="buttons-colors" aria-label={color} style={{ backgroundColor: `${color}` }} />
   ));
+
+  const handleClick = () => {
+    setState({
+      ...data,
+      visibleSocial: !data.visibleSocial,
+    });
+  };
+
 
   return (
     <div className="main">
@@ -74,6 +83,32 @@ const MainProduct = () => {
           </div>
           <div className="rating-stars">
             {ratingStars()}
+            <Media query="(min-width: 1024px) ">
+              <div>
+                <div
+                  role="button"
+                  className="title-share"
+                  onClick={handleClick}
+                  onKeyDown={handleClick}
+                  tabIndex={0}
+                >
+                  Share it!
+                </div>
+                {data.visibleSocial && (
+                <div
+                  className="social-media-section"
+                  onClick={handleClick}
+                  onKeyDown={handleClick}
+                  role="button"
+                  tabIndex={0}
+
+                >
+                  {jsxSocialMedia}
+                </div>
+                )}
+              </div>
+            </Media>
+
           </div>
           <Media query="(max-width: 767px)">
             <div className="social-media-section">
