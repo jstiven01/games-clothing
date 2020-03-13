@@ -1,13 +1,29 @@
 $height-carousel: 264px;
-$width-carousel: 288px;
+$width-carousel: 282px;
+$width-carousel-tablet: 300px;
+$width-carousel-desktop: 266px;
+$break-tablet: 768px;
+$break-desktop: 1024px;
+
 .product-section{
     height: 340px;
+    @media screen and (min-width: $break-tablet) {
+        width: 642px;
+        margin: 60px auto 0;
+    }
+    @media screen and (min-width: $break-desktop) {
+        width: 836px;
+    }
+
     .title-section{
         margin-bottom: 22px;
         text-align: center;
         font-size: 22px;
         font-weight: 900;
         letter-spacing: 3px;
+        @media screen and (min-width: $break-desktop) {
+            text-align: left;
+        }
         
     }
 }
@@ -53,42 +69,84 @@ $width-carousel: 288px;
     height: $height-carousel;
     width: $width-carousel;
     background-repeat: no-repeat;
+    @media screen and (min-width: $break-tablet) {
+        width: $width-carousel-tablet;
+    }
+    @media screen and (min-width: $break-desktop) {
+        width: $width-carousel-desktop;
+    }
 }
 .img2{
     background-image: url('../img/product2.png');
     height: $height-carousel;
     width: $width-carousel;
     background-repeat: no-repeat;
+    @media screen and (min-width: $break-tablet) {
+        width: $width-carousel-tablet;
+    }
+    @media screen and (min-width: $break-desktop) {
+        width: $width-carousel-desktop;
+    }
 }
 .img3{
     background-image: url('../img/product3.png');
     height: $height-carousel;
     width: $width-carousel;
     background-repeat: no-repeat;
+    @media screen and (min-width: $break-tablet) {
+        width: $width-carousel-tablet;
+    }
+    @media screen and (min-width: $break-desktop) {
+        width: $width-carousel-desktop;
+    }
 }
 .img4{
     background-image: url('../img/product4.png');
     height: $height-carousel;
     width: $width-carousel;
     background-repeat: no-repeat;
+    @media screen and (min-width: $break-tablet) {
+        width: $width-carousel-tablet;
+    }
+    @media screen and (min-width: $break-desktop) {
+        width: $width-carousel-desktop;
+    }
 }
 .img5{
     background-image: url('../img/product5.png');
     height: $height-carousel;
     width: $width-carousel;
     background-repeat: no-repeat;
+    @media screen and (min-width: $break-tablet) {
+        width: $width-carousel-tablet;
+    }
+    @media screen and (min-width: $break-desktop) {
+        width: $width-carousel-desktop;
+    }
 }
 .img6{
     background-image: url('../img/product6.png');
     height: $height-carousel;
     width: $width-carousel;
     background-repeat: no-repeat;
+    @media screen and (min-width: $break-tablet) {
+        width: $width-carousel-tablet;
+    }
+    @media screen and (min-width: $break-desktop) {
+        width: $width-carousel-desktop;
+    }
 }
 
 .size-carr{
     height: $height-carousel;
     width: $width-carousel;
     margin: 0 auto;
+}
+
+.products-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
   
 
