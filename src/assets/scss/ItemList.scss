@@ -1,72 +1,95 @@
+$height-carousel: 264px;
+$width-carousel: 288px;
+.product-section{
+    height: 340px;
+    .title-section{
+        margin-bottom: 22px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 900;
+        letter-spacing: 3px;
+        
+    }
+}
+
+
 .container {
     position: relative;
     margin: auto;
-  }
-  
-  .buttonBack {
+}
+
+.buttonBack {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: -38px;
     transform: translateY(-50%);
     background-color: transparent;
-    font-size: 36px;
-  }
-  
-  .buttonNext {
+    border: none;
+    background-image: url('../img/left.png');
+    height: 50px;
+    width: 29px;
+}
+
+.buttonNext {
     position: absolute;
     top: 50%;
-    right: -50px;
+    right: -38px;
     transform: translateY(-50%);
     font-size: 60px;
     background-color: transparent;
     border: none;
-  }
-  
-  
-  .dotGroup {
+    background-image: url('../img/right.png');
+    height: 50px;
+    width: 29px;
+}
+
+
+.dotGroup {
     text-align: center;
-  }
-  
-  .img1{
+}
+
+.img1{
     background-image: url('../img/product1.png');
-    height: 284px;
-    width: 100%;
+    height: $height-carousel;
+    width: $width-carousel;
     background-repeat: no-repeat;
-  }
-  .img2{
+}
+.img2{
     background-image: url('../img/product2.png');
-    height: 284px;
-    width: 100%;
+    height: $height-carousel;
+    width: $width-carousel;
     background-repeat: no-repeat;
-  }
-  .img3{
+}
+.img3{
     background-image: url('../img/product3.png');
-    height: 284px;
-    width: 100%;
+    height: $height-carousel;
+    width: $width-carousel;
     background-repeat: no-repeat;
-  }
-  .img4{
+}
+.img4{
     background-image: url('../img/product4.png');
-    height: 284px;
-    width: 100%;
+    height: $height-carousel;
+    width: $width-carousel;
     background-repeat: no-repeat;
-  }
-  .img5{
+}
+.img5{
     background-image: url('../img/product5.png');
-    height: 284px;
-    width: 100%;
+    height: $height-carousel;
+    width: $width-carousel;
     background-repeat: no-repeat;
-  }
-  .img6{
+}
+.img6{
     background-image: url('../img/product6.png');
-    height: 284px;
-    width: 100%;
+    height: $height-carousel;
+    width: $width-carousel;
     background-repeat: no-repeat;
-  }
+}
+
+.size-carr{
+    height: $height-carousel;
+    width: $width-carousel;
+    margin: 0 auto;
+}
   
-  .size-carr{
-    height: 284px;
-    width: 300px;
-    margin-left: 20px;
-  }
-  
+
+

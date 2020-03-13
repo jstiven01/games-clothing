@@ -1,0 +1,29 @@
+.product-item{
+    .product-img-price{
+        position: relative;
+        width:  288px;
+        .sale{
+            color: #ce2c52;
+        }
+        .price-product{
+            background-color:  rgba(138, 230, 207,0.8);
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 900;
+        }
+    }
+    .description-product{
+        font-size: 15px;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+    }
+
+    
+}
+
