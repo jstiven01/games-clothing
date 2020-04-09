@@ -1,6 +1,6 @@
 # Project: Gamers clothing
 
-> Implementing a web page of the gamers clothing
+> Implementing a clothing web page
 
 ## Screenshots
 
@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://stormy-sands-45425.herokuapp.com/)
+[Live Demo Link](https://jstiven01.github.io/games-clothing/)
 
 ## Installation and Usage
 
@@ -48,7 +48,7 @@ This project has no automated tests. This will be an upcoming feature
 
 ## Upcoming Features
 
-To see the upcoming features check the [issues page](https://github.com/jstiven01/react-calculator/issues)
+To see the upcoming features check the [issues page](https://github.com/jstiven01/games-clothing/issues)
 
 ## Author
 
